@@ -65,6 +65,7 @@
         //
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
+        
         try {
           let app = firebase.app();
           let features = [
@@ -80,8 +81,17 @@
           ].filter(feature => typeof app[feature] === 'function');
           loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
         } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBW1eQKPwdlFiVkjiutUmQ2waYl7OCFVfM",
+  authDomain: "neofficial-fe085.firebaseapp.com",
+  databaseURL: "https://neofficial-fe085-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "neofficial-fe085",
+  storageBucket: "neofficial-fe085.appspot.com",
+  messagingSenderId: "680890862490",
+  appId: "1:680890862490:web:3c954a90765b37f8840823",
+  measurementId: "G-NEPEMW0GK7"
+};
         }
       });
     </script>
